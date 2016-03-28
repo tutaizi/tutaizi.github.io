@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+
+body{
+	background-color: #a9a9a9;
+	min-width: 1200px;
+}
+
+.header{
+	position: relative;
+	margin: 0
+	width: 1200px;
+	height: 60px;
+	background-color: #303030;
+}
+
+.logo img{
+	position: absolute;
+	left: 0;
+	height: 40px;
+	top:10px;
+}
+
+.header ul{
+	position: absolute;
+	top: 20px;
+	right: 0;		
+	list-style: circle inside black;
+}
+
+.header li{
+	float: left;
+	font-size: 14px;
+	width: 100px;
+	/*display: inline-block;*/
+}
+
+.header a:link, .header a:visited{
+	color: #fafafa;	
+	text-decoration: none;
+}
+
+.header a:hover, .header a:active{
+	color: #d4d4d4;	
+	text-decoration: none;
+}
+
+.article{
+	width: 1150px;
+	margin: 50px;
+	padding: 40px 40px;
+	background-color: #fafafa;
+	box-shadow: 2px 2px 3px;
+}
+
+h2{
+	font-size: 25px;
+	margin: 10px 0 0 0;
+}
+
+h3{
+	font-size: 20px;
+	margin: 10px 0 0 0;
+	color: #8a8a8a;
+}
+
+.author_time{
+	font-size: 15px;
+	margin: 5px 0 0 0;
+	color: #8a8a8a;
+}
+
+.paragraph{
+	margin: 20px 0 20px 0;
+	font-size: 16px;	
+	text-indent: 2em;
+}
+
+.good_pic{
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid;
+	color: #000000;
+	width: 600px;
+/*	max-height: 100px;
+	max-width: 100px;*/
+}
+
+.picture{
+	text-align: center;
+	padding: 20px;
+}
+
+.pic_description{
+	text-align: center;
+}
+
+.rank{
+	margin: 10px 0 10px 30px;
+	font-size: 18px;
+}
+
+.table{	
+	border: 1px solid #b7b7b7;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr, td{
+	font-size: 14px;
+	border: 1px solid #b7b7b7;
+	padding: 5px;
+}
+
+#tr1 td{
+	color: #ffffff;
+	background-color: #080808;
+}
+
+#tr6 td{
+	background-color: #b7b7b7;
+}
+
+h4{
+	padding: 10px;
+	border-left: 3px solid #b7b7b7;
+	font-size: 18px;
+}
+
+.form_group{	
+	font-size: 14px;
+	padding: 20px 0 0 30%;	
+}
+
+form p{	
+	padding-top: 8px;
+	padding-left: 112px;
+	color: #8a8a8a;
+}
+
+form span{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+form textarea{
+	vertical-align: text-top;
+	width: 60%;
+}
+
+.submit_button{	
+	margin: 20px 10px 0 -45%;	
+	width: 148%;
+	height: 50px;
+	background-color: #4169e1;
+	font-size: 20px;
+	text-align: center;
+	color: #fcfcfc;
+	border-radius: 10px;
+}
+
+.submit_button:hover{
+	background-color: #104e8b;
+}
