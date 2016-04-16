@@ -1,0 +1,215 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+
+body{
+	background-color: #b0c4de;
+	height: 100%;
+	width: 100%;
+	min-width: 600px;
+	min-height: 500px;		
+	overflow: auto;
+}
+
+@font-face{
+	font-family: foldeck;
+	src: url('font/Foldeck.ttf');
+}
+@font-face{
+	font-family: herlock;
+	src: url('font/Herlock.ttf');
+}
+
+@font-face{
+	font-family: yellowJelly;
+	src: url('font/YellowJelly.ttf');
+}
+
+.home{
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	left: 20px;
+	top: 20px;	
+}
+
+button{
+	font-family: foldeck;
+	color: white;	
+	background-color: #101060;
+	border-color: #101060;
+}
+
+.home button{
+	display: block;
+	height: 40px;
+	width: 80px;
+	font-size: 25px;	
+	color: white;
+	
+	border-radius: 10px;
+}
+
+#wrapper{	
+	position: absolute;			
+	height: 90%;
+	width: 90%;
+	min-width: 600px;
+	min-height: 500px;
+	max-width: 1200px;
+	max-height: 750px;
+	left: 5%;
+	top: 5%;
+	border: 5px solid black;	
+	border-radius: 50px;	
+	background: linear-gradient(#835CB5 , #598AB3);
+	/*background-image: url('UI-images/desk.png');*/
+	box-shadow: -5px 3px 3px #5e5e5e;
+	text-align: center;
+}
+
+.player img{
+	height: 140px;
+	width: 100px;
+	padding-left: 0;
+	margin-left: 0;		
+	box-shadow: -2px 2px 1px #5e5e5e;
+}
+
+.player img~img{
+	margin-left: -70px;
+}
+
+.player{	
+	height: 40%;
+	width: 95%;
+	text-align: center;
+	/*border: 1px solid;*/
+	margin-left: 2.5%;	
+}
+
+#player1{
+	position: absolute;
+	top: 0;		
+}
+
+#player2{
+	position: absolute;
+	bottom: 0;	
+	
+}
+
+.player_name {
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+	height: 20%;
+	width: 80px;	
+	text-align: center;
+	margin-top: 2%;
+	font-family: foldeck;
+	font-size: 25px;
+	/*border: 1px solid;*/
+}
+
+.info{
+	position: absolute;
+	height: 50px;
+	width: 220px;
+	right: 0;
+	top: 0;
+	/*border: 1px solid;*/
+}
+
+.result, .value{
+	display: inline-block;	
+	vertical-align: middle;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+	margin-top: 5%;
+	font-family: foldeck;	
+	/*border: 1px solid;*/
+}
+
+.value{
+	font-size: 20px;
+}
+
+.result{
+	font-size: 28px;
+	/*color: #CD0000;*/
+	width: 100px;
+	text-align: center;
+	/*border: 2px dashed #1C86EE;*/
+	margin-left: 20px;	
+}
+
+.pokers,{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+.raise{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	left: 0;
+	bottom: 20px;
+	/*border: 1px solid;*/
+}
+
+.raise button{
+	height: 30px;
+	width: 60px;
+	font-size: 18px;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+
+.player_btn{
+	height: 80px;
+	width: 60px;
+	position: absolute;		
+	right: 0;
+	bottom: 50px;	
+	/*border: 1px solid;*/
+}
+
+.player_btn button{
+	/*float: left;*/
+	height: 30px;
+	width: 60px;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 8px;
+}
+
+.deal{
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -25px;
+}
+	
+.deal button{		
+	display: block;
+	height: 50px;
+	width: 100px;
+	font-size: 30px;
+	/*border-color: #1C86EE;
+	background: linear-gradient(#1C86EE, #00BFFF, #1C86EE);*/
+	border-radius: 10px;
+}
+
+

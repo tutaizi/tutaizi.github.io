@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BlackJack-single player!</title>
+	<link rel="stylesheet" href="BlackJack.css">
+	
+</head>
+<body>	
+	<div id="wrapper">		
+		<div class="player" id="player1">
+			<p class="player_name">Dealer</p>
+			<div class="info" id="controller1">
+				<div class="value" id="value1">Total: <span>0</span></div>
+				<div class="result" id="result1">PLAYING</div>								
+			</div>		
+			<div class="player_wrap">					
+				<div class="pokers" id="poker1">			
+					<img id="poker1_1" src="cardBack.jpg" alt="card1">		
+					<img id="poker1_2" src="cardBack.jpg" alt="card2">											
+				</div>		
+			</div>
+		</div>		
+		<div class="player" id="player2">
+			<p class="player_name">Player</p>
+			<div class="info" id="controller2">			
+				<div class="value" id="value2">Total: <span>0</span></div>	
+				<div class="result" id="result2">PLAYING</div>									
+			</div>										
+			<div class="pokers" id="poker2">			
+					<img id="poker2_1" src="cardBack.jpg" alt="poker1">		
+					<img id="poker2_2" src="cardBack.jpg" alt="poker2">				
+			</div>
+			<div class="raise" id="raise2">
+				<p class="bet">Bet: <span id="bet2">10</span>$ </p>
+				<p class="bet_left">Left: <span id="bet_left2">90</span>$</p>
+				<button type="button" class="raise_btn" id="raise_btn2" onclick="raise('player2')">RAISE</button>
+			</div>		
+			<div class="player_btn" id="player_btn2">
+				<button type="button"  class="hit" id="hit2" onclick="userHit()" >HIT</button>
+				<br/>
+				<button type="button"  class="stand" id="stand2" onclick="userStand()">STAND</button>
+			</div>
+		</div>
+		<div class="deal">
+			<button type="button"  id="deal" onclick="deal()">DEAL</button>
+		</div>
+		<div class="home">
+			<button type="button" id="home_btn" onclick="window.open('Home.html', '_self')">HOME</button>
+		</div>
+	</div>
+	<div class="pop"></div>
+
+	<script type="text/javascript" src="singlePlayer.js"></script>
+</body>
+</html>
