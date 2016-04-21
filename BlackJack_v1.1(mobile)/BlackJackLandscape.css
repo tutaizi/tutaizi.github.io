@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+
+body{
+	background-color: #b0c4de;
+	height: 100%;
+	width: 100%;	
+	
+}
+
+@font-face{
+	font-family: foldeck;
+	src: url('font/Foldeck.ttf');
+}
+@font-face{
+	font-family: herlock;
+	src: url('font/Herlock.ttf');
+}
+
+@font-face{
+	font-family: yellowJelly;
+	src: url('font/YellowJelly.ttf');
+}
+
+.home{
+	height: 10%;
+	width: 15%;
+	position: absolute;
+	left: 2%;
+	top: 10%;	
+}
+
+button{
+	font-family: foldeck;
+	color: white;	
+	background-color: #101060;
+	border-color: #ffffff;
+}
+
+.home button{
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 25px;	
+	color: white;	
+	border-radius: 10px;
+}
+
+#wrapper{	
+	position: absolute;			
+	height: 90%;
+	width: 90%;	
+	left: 5%;
+	top: 5%;
+	border: 5px solid black;	
+	border-radius: 50px;	
+	background: linear-gradient(#835CB5 , #598AB3);
+	/*background-image: url('UI-images/desk.png');*/
+	box-shadow: -5px 3px 3px #5e5e5e;
+	text-align: center;
+}
+
+.player img{
+	height: 18%;
+	width: 12.85%;
+	padding-left: 0;
+	margin-left: 0;		
+	box-shadow: -2px 2px 1px #5e5e5e;
+}
+
+.player img~img{
+	margin-left: -20%;
+}
+
+.player{	
+	height: 50%;
+	width: 100%;
+	text-align: center;
+	/*border: 1px solid;*/
+	
+}
+
+#player1{
+	position: absolute;
+	top: 0;		
+}
+
+#player2{
+	position: absolute;
+	bottom: 0;	
+	
+}
+
+.player_name {
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+	height: 12%;
+	width: 10%;	
+	text-align: center;
+	/*margin-top: 2%;*/
+	font-family: foldeck;
+	font-size: 1em;
+	/*border: 1px solid;*/
+}
+
+.info{
+	position: absolute;
+	height: 25%;
+	width: 100%;
+	right: 0;
+	top: 0;
+	/*border: 1px solid;*/
+}
+
+.result, .value{
+	display: inline-block;	
+	vertical-align: middle;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+	/*margin-top: 2%;*/
+	font-family: foldeck;	
+	font-size: 1em;
+	/*border: 1px solid;*/
+}
+
+.result{	
+	/*color: #CD0000;*/
+	width: 100px;
+	text-align: center;
+	/*border: 2px dashed #1C86EE;*/
+	margin-left: 30%;	
+}
+
+.pokers,{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+.raise{
+	position: absolute;
+	height: 50%;
+	width: 20%;
+	left: 2%;
+	bottom: 20%;
+	/*border: 1px solid;*/
+}
+
+.raise p{
+	font-family: foldeck;
+	font-size: 1em;
+}
+
+.raise button{
+	height: 40%;
+	width: 90%;
+	font-size: 1em;
+	border-radius: 50%;
+	/*margin-top: 10px;*/
+}
+
+.player_btn{
+	height: 40%;
+	width: 15%;
+	position: absolute;		
+	right: 3%;
+	bottom: 30%;	
+	/*border: 1px solid;*/
+}
+
+.player_btn button{
+	/*float: left;*/
+	height: 50%;
+	width: 100%;
+	font-size: 1em;
+	text-align: center;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+}
+
+.deal{
+	height: 10%;
+	width: 15%;
+	position: absolute;
+	right: 3%;
+	bottom:3%;
+	margin-left: -50px;
+	margin-top: -25px;
+}
+	
+.deal button{		
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 1em;
+	/*border-color: #1C86EE;
+	background: linear-gradient(#1C86EE, #00BFFF, #1C86EE);*/
+	border-radius: 50%;
+}
+
+

@@ -1,0 +1,200 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+@font-face{
+	font-family: yellowJelly;
+	src: url('font/YellowJelly.ttf');
+}
+
+@keyframes zoom{
+	from {height: 50px;	width: 150px;}
+	to {height: 60px; width: 180px;}
+}
+
+@media screen and (min-width: 768px){
+	body{
+		background-color: #b0c4de;
+		height: 100%;
+		width: 100%;
+		min-width: 768px;
+		min-height: 500px;
+		overflow: auto;	
+	}
+}
+
+@media screen and (max-width: 768px){
+	body{
+		background-color: #b0c4de;
+		height: 100%;
+		width: 100%;			
+	}
+}
+
+#wrapper{
+	position: absolute;
+	height: 90%;
+	width: 90%;	
+	left: 5%;
+	top: 5%;	
+	border-radius: 50px;
+	border: 5px solid black;
+	background: linear-gradient(#835CB5 , #598AB3);
+	box-shadow: -5px 3px 3px #5e5e5e;
+}
+
+@media only screen and (min-width: 768px) {
+	#inner_wrap{
+		position: absolute;
+		height: 500px;
+		width: 300px;	
+		left: 50%;
+		top: 50%;
+		margin-left: -150px;
+		margin-top: -250px;
+		/*border: 5px solid black;*/
+	}
+
+	#gameIcon{
+		height: 200px;
+		width: 200px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30%;	
+	}
+
+	.mode{
+		width: 200px;
+		height: 80px;	
+		margin-top: 30px;
+		margin-left: auto; 
+		margin-right: auto; 
+		text-align: center;
+		/*border: 1px solid;*/
+	}
+
+	.mode button{
+		height: 50px;
+		width: 150px;
+		margin-top: 20px;
+		font-family: yellowJelly;
+		color: #E0E0E0;
+		font-size: 21px;
+		font-weight: bold;	
+		background-color: #101060;
+		border-color: #101060;
+		border-radius: 10px;
+		box-shadow: 2px 2px 1px #5e5e5e;
+		/*background: linear-gradient(#1C86EE, #00BFFF, #1C86EE);*/
+
+		transition: width 0.1s, height 0.1s;
+		-webkit-transition: width 0.1s, height 0.1s;	
+	}
+
+	.mode button:hover{
+		width: 180px;
+		height: 60px;
+		/*font-size: 24px;*/
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#inner_wrap{		
+		/*position: absolute;*/
+		height: 100%;
+		width: 100%;			
+		/*border: 5px solid black;*/
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait){
+
+	#gameIcon{
+		height: 40%;
+		width: auto;
+		max-width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;	
+		margin-top: 30%;
+	}
+
+	.mode{
+		width: 50%;
+		height: 15%;	
+		margin-top: 10%;
+		margin-left: auto; 
+		margin-right: auto; 
+		text-align: center;
+		/*border: 1px solid;*/
+	}
+
+	.mode button{
+		height: 80%;
+		width: 100%;
+		
+		font-family: yellowJelly;
+		color: #E0E0E0;
+		font-size: 1em;
+		font-weight: bold;	
+		background-color: #101060;
+		border-color: #101060;
+		border-radius: 10px;
+		box-shadow: 2px 2px 1px #5e5e5e;			
+	}	
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape){
+
+	#gameIcon{
+		height: auto;
+		width: 25%;
+		max-height: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;	
+		margin-top: 10%;		
+	}
+
+	.mode{
+		width: 40%;
+		height: 20%;	
+		margin-top: 3%;
+		margin-left: auto; 
+		margin-right: auto; 
+		text-align: center;
+		/*border: 1px solid;*/
+	}
+
+	.mode button{
+		height: 80%;
+		width: 100%;
+		
+		font-family: yellowJelly;
+		color: #E0E0E0;
+		font-size: 1em;
+		font-weight: bold;	
+		background-color: #101060;
+		border-color: #101060;
+		border-radius: 10px;
+		box-shadow: 2px 2px 1px #5e5e5e;			
+	}	
+}
+
+h1{
+	text-align: center;	
+	/*height: 5%;*/
+	width: 100%;	
+	margin: 50px 0 0 0;	
+}
+
+.introduce{
+	text-align: center;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+
+
