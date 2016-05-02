@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+
+body{
+	margin: 10px;
+	padding: 10px;	
+	background-color: #eee;	
+}
+
+.main-wrapper{
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #999;
+	overflow: auto;	
+	min-width: 600px;
+}
+
+.left{
+	padding: 20px;
+	border: 1px solid #999;
+	float: left;
+	width: 200px;
+}
+
+h1{
+	display: inline-block;
+	font-size: 20px;
+	vertical-align: top;
+}
+
+.team_name img{
+	height: 80px;
+	width: 80px;
+	display: inline-block;
+}
+
+.right{
+	padding: 20px;
+	border: 1px solid #999;
+	float: right;
+	width: 100px;
+	
+}
+
+.right ul li{
+	list-style-type: none;
+}
+
+.right img{
+	height: 80px;
+	width: 80px;
+	padding: 10px;
+	text-align: center;
+}
+
+.center{
+	margin-left: 260px;
+	margin-right: 180px;
+	padding: 20px;
+	border: 1px solid #999;	
+	font-size: 16px;
+}
+
