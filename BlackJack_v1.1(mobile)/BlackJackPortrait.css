@@ -29,15 +29,15 @@ body{
 
 .home{
 	/*display: none;*/
-	height: 5%;
-	width: 20%;
+	height: 1.5em;
+	width: 3em;
 	position: absolute;
-	left: 6%;
-	top: 1%;	
+	left: 0;
+	top: 0;	
 }
 
 button{
-	font-family: foldeck;
+	/*font-family: foldeck;*/
 	color: white;	
 	background-color: #101060;
 	border-color: #ffffff;
@@ -47,9 +47,9 @@ button{
 	display: block;
 	height: 100%;
 	width: 100%;
-	font-size: 1em;	
+	font-size: 0.8em;	
 	color: white;	
-	border-radius: 50%;
+	border-radius: 20%;
 }
 
 #wrapper{	
@@ -59,7 +59,7 @@ button{
 	left: 5%;
 	top: 5%;
 	border: 5px solid black;	
-	border-radius: 50px;	
+	border-radius: 0 50px 50px 50px;	
 	background: linear-gradient(#835CB5 , #598AB3);
 	/*background-image: url('UI-images/desk.png');*/
 	box-shadow: -5px 3px 3px #5e5e5e;
@@ -95,7 +95,7 @@ button{
 	width: 80px;	
 	text-align: center;
 	margin-top: 2%;
-	font-family: foldeck;
+	/*font-family: foldeck;*/
 	font-size: 25px;
 	/*border: 1px solid;*/
 }
@@ -167,12 +167,13 @@ button{
 	/*float: left;*/
 	height: 10%;
 	width: 20%;
-	font-size: 1em;
+	font-size: 0.8em;
 	text-align: center;	
 	border-radius: 50%;
 	position: absolute;
 	bottom: 0;
 	/*border: 1px solid;*/
+	display: none;
 }
 
 #hit2{		
@@ -201,4 +202,38 @@ button{
 	border-radius: 50%;
 }
 
+#hide_layer{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+}
 
+.pop_window{
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -100px;
+	background: linear-gradient(#fff, #6a9bc4);
+	border: 2px solid #000;
+	border-radius: 5px;
+	box-shadow: -2px 2px 2px #333;
+	/*font-weight: bold;*/
+	text-align: center;
+}
+
+.pop_window p{
+	margin-top: 30px;
+}
+
+.pop_btn{
+	font-size: 1em;
+	width: 4em;
+	height: 1.5em;	
+	margin-top: 50px;
+	margin-left: 20px;
+}

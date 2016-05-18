@@ -270,25 +270,13 @@ function computerHit() {
 			player1.showCards(pokerElements1);
 			showResult();		
 			if (player2.betLeft==0) {
-				var playAgain=window.confirm("You have lost all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='none';
+				document.getElementById('pop_lose').style.display='block';
 			}else if (player2.betLeft>=200) {
-				player2.betLeft=200;
-				betLeftElement.innerHTML=player2.betLeft;
-				playAgain=window.confirm("You have win all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='block';
+				document.getElementById('pop_lose').style.display='none';
 			}
 
 		}else{
@@ -325,25 +313,13 @@ function userHit() {
 			player1.showCards(pokerElements1);
 			showResult();
 			if (player2.betLeft==0) {
-				var playAgain=window.confirm("You have lost all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='none';
+				document.getElementById('pop_lose').style.display='block';
 			}else if (player2.betLeft>=200) {
-				player2.betLeft=200;
-				betLeftElement.innerHTML=player2.betLeft;
-				playAgain=window.confirm("You have win all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='block';
+				document.getElementById('pop_lose').style.display='none';
 			}
 		}else{
 			computerHit();
@@ -387,25 +363,13 @@ function compareStand(player1, player2) {
 			showResult();
 			player1.showCards(pokerElements1);
 			if (player2.betLeft==0) {
-				var playAgain=window.confirm("You have lost all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='none';
+				document.getElementById('pop_lose').style.display='block';
 			}else if (player2.betLeft>=200) {
-				player2.betLeft=200;
-				betLeftElement.innerHTML=player2.betLeft;
-				playAgain=window.confirm("You have win all the money! Play again?");
-				if (playAgain) {
-					player2.bet=10;
-					player2.betLeft=90;
-					deal();
-				}else{
-					document.getElementById('deal').style.display='none';
-				}
+				document.getElementById('hide_layer').style.display='block';
+				document.getElementById('pop_win').style.display='block';
+				document.getElementById('pop_lose').style.display='none';
 			}
 		}
 	}
@@ -430,25 +394,24 @@ function userStand(player) {
 		showResult();
 		player1.showCards(pokerElements1);
 		if (player2.betLeft==0) {
-			var playAgain=window.confirm("You have lost all the money! Play again?");
-			if (playAgain) {
-				player2.bet=10;
-				player2.betLeft=90;
-				deal();
-			}else{
-			document.getElementById('deal').style.display='none';
-			}
+						document.getElementById('hide_layer').style.display='block';
+						document.getElementById('pop_win').style.display='none';
+						document.getElementById('pop_lose').style.display='block';
 		}else if (player2.betLeft>=200) {
-			player2.betLeft=200;
-			betLeftElement.innerHTML=player2.betLeft;
-			playAgain=window.confirm("You have win all the money! Play again?");
-			if (playAgain) {
-				player2.bet=10;
-				player2.betLeft=90;
-				deal();
-			}else{
-				document.getElementById('deal').style.display='none';
-			}
+						document.getElementById('hide_layer').style.display='block';
+						document.getElementById('pop_win').style.display='block';
+						document.getElementById('pop_lose').style.display='none';
 		}
 	}
+}
+
+function newGame() {
+	document.getElementById('hide_layer').style.display='none';
+	player2.bet=10;
+	player2.betLeft=90;
+	deal();
+}
+
+function noGame() {
+	window.open('index.html', '_self');
 }

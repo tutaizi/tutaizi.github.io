@@ -11,7 +11,7 @@
 <body>	
 	<div id="wrapper">		
 		<div class="player" id="player1">
-			<p class="player_name">Dealer</p>
+			<p class="player_name">庄家</p>
 			<div class="info" id="controller1">
 				<div class="value" id="value1">Total: <span>0</span></div>
 				<div class="result" id="result1">PLAYING</div>								
@@ -24,7 +24,7 @@
 			</div>
 		</div>		
 		<div class="player" id="player2">
-			<p class="player_name">Player</p>
+			<p class="player_name">玩家</p>
 			<div class="info" id="controller2">			
 				<div class="value" id="value2">Total: <span>0</span></div>	
 				<div class="result" id="result2">PLAYING</div>									
@@ -36,22 +36,34 @@
 			<div class="raise" id="raise2">
 				<p class="bet">Bet: <span id="bet2">10</span>$ </p>
 				<p class="bet_left">Left: <span id="bet_left2">90</span>$</p>
-				<button type="button" class="raise_btn" id="raise_btn2" onclick="raise('player2')">RAISE</button>
+				<button type="button" class="raise_btn" id="raise_btn2" onclick="raise('player2')">加注</button>
 			</div>		
 			<div class="player_btn" id="player_btn2">
-				<button type="button"  class="hit" id="hit2" onclick="userHit()" >HIT</button>
-				<br/>
-				<button type="button"  class="stand" id="stand2" onclick="userStand()">STAND</button>
+				<button type="button"  class="hit" id="hit2" onclick="userHit()" >要牌</button>	
+				<button type="button"  class="stand" id="stand2" onclick="userStand()">停牌</button>
 			</div>
 		</div>
 		<div class="deal">
-			<button type="button"  id="deal" onclick="deal()">DEAL</button>
+			<button type="button"  id="deal" onclick="deal()">发牌</button>
 		</div>
 		<div class="home">
 			<button type="button" id="home_btn" onclick="window.open('index.html', '_self')">HOME</button>
 		</div>
 	</div>
 	<div class="pop"></div>
+
+	<div id="hide_layer">
+		<div class="pop_window" id="pop_win">
+			<p>你赢得了所有筹码！<br/>再来一局？</p>
+			<button type="button" class="pop_btn yes" onclick="newGame()">好哒</button>
+			<button type="button" class="pop_btn no" onclick="noGame()">不玩了</button>
+		</div>
+		<div class="pop_window" id="pop_lose">
+			<p>你输光了所有筹码！<br/>再来一局？</p>
+			<button type="button" class="pop_btn yes" onclick="newGame()">好哒</button>
+			<button type="button" class="pop_btn no" onclick="noGame()">不玩了</button>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="singlePlayer.js"></script>
 </body>
