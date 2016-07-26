@@ -23,25 +23,25 @@ var Player={
 			player.cards[i]=remainCards[cardNumber];
 			player.value[i]=getValue(player.cards[i]);
 			remainCards.splice(cardNumber, 1);
-		};
+		};		
 		//show all cards of player
 		player.showCards=function(pokerElements) {
 			switch(pokerElements.id){
 				case 'poker1':
 					if (player.result=="PLAYING") {
-						pokerElements.children[0].src="pokers/images/"+player.cards[0]+".jpg";
-						pokerElements.children[1].src="cardBack.jpg";
+						pokerElements.children[0].src="pokers/images/"+player.cards[0]+".png";
+						pokerElements.children[1].src="cardBack.png";
 						for (var i = 2; i < player.cards.length; i++) {	
 							if (i>pokerElements.children.length-1) {
 								var newPoker=document.createElement('img');
-								newPoker.alt="card"+ (i+1).toString();
+								newPoker.alt="card"+ (i+1).toString();								
 								pokerElements.appendChild(newPoker);
-							}					
-							pokerElements.children[i].src="cardBack.jpg";	
+							}
+							pokerElements.children[i].src="cardBack.png";	
 						}
 					}else{  //game over, show player1's all cards
 						for (var i = 0; i < pokerElements.children.length; i++) {
-							var imagePath="pokers/images/"+player.cards[i]+".jpg";
+							var imagePath="pokers/images/"+player.cards[i]+".png";
 							pokerElements.children[i].src=imagePath;
 						}
 						document.getElementById('value1').children[0].innerHTML=player1.totalValue();
@@ -50,13 +50,14 @@ var Player={
 					break;
 				case 'poker2':
 					for (var i = 0; i < player.cards.length; i++) {
-						var imagePath="pokers/images/"+player.cards[i]+".jpg";
+						var imagePath="pokers/images/"+player.cards[i]+".png";
 						if (i>pokerElements.children.length-1) {
 							var newPoker=document.createElement('img');
 							newPoker.alt="card"+ (i+1).toString();
 							pokerElements.appendChild(newPoker);
-						}					
-						pokerElements.children[i].src=imagePath;						
+							pokerElements.children[i].src="cardBack.png";							
+						}
+						pokerElements.children[i].src=imagePath;												
 					}
 					break;
 				defualt:
@@ -147,8 +148,10 @@ function removeExtraCards(pokerElements) {
 function showResult() {
 	document.getElementById('result1').innerHTML=player1.result;
 	document.getElementById('result2').innerHTML=player2.result;
-	document.getElementById('result1').style.color='#8B0000';
-	document.getElementById('result2').style.color='#8B0000';
+	document.getElementById('result1').style.color='#c00';
+	document.getElementById('result2').style.color='#c00';
+	document.getElementById('result1').className='result over';
+	document.getElementById('result2').className='result over';
 	document.getElementById('value1').children[0].innerHTML=player1.totalValue();
 	document.getElementById('value2').children[0].innerHTML=player2.totalValue();	
 	
@@ -170,6 +173,8 @@ function deal() {
 	player2.result="PLAYING";
 	document.getElementById('result1').innerHTML=player1.result;
 	document.getElementById('result2').innerHTML=player2.result;
+	document.getElementById('result1').className='result';
+	document.getElementById('result2').className='result';
 	document.getElementById('result1').style.color= 'black';
 	document.getElementById('result2').style.color= 'black';
 
@@ -223,6 +228,7 @@ function deal() {
 	//show total value
 	document.getElementById('value1').children[0].innerHTML=player1.value[0];
 	document.getElementById('value2').children[0].innerHTML=player2.totalValue();
+
 }
 
 //click on RAISE button
@@ -310,7 +316,7 @@ function userHit() {
 			player2.result="LOSE!";			
 			player1.bet=0;
 			player2.bet=0;
-			player1.showCards(pokerElements1);
+			player1.showCards(pokerElements1);			
 			showResult();
 			if (player2.betLeft==0) {
 				document.getElementById('hide_layer').style.display='block';
