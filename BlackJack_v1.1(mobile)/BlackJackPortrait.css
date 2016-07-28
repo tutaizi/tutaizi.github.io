@@ -134,7 +134,7 @@ button{
 	vertical-align: bottom;
 	zoom: 1; /* Fix for IE7 */
 	*display: inline; /* Fix for IE7 */
-	margin-top: 5%;
+	/*margin-top: 5%;*/
 	/*border: 1px solid;*/
 }
 
