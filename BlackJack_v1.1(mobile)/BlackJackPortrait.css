@@ -67,15 +67,15 @@ button{
 }
 
 .player img{
-	height: 35%;
-	width: 25%;
+	height:auto;
+	/*width: 50%;*/
 	padding-left: 0;
 	margin-left: 0;		
 	box-shadow: -2px 2px 1px #5e5e5e;
 }
 
 .player img~img{
-	margin-left: -17%;
+	margin-left: -25%;
 }
 
 .player{	
