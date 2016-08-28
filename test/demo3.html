@@ -88,18 +88,18 @@
 				elePurple.style.opacity = '1';
 				elePink.style.opacity = '1';
 				diff = diff - 600;	
-				var dropSpeed = diff/150,
+				var dropSpeed = diff/170,
 					leftSpeed = diff/3,
 					rightSpeed = diff/5,
-					rotateSpeed = diff/10;
+					rotateSpeed = diff/6;
 				// elePurple.style.transform = 'translate(-' + leftSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(-' + rotateSpeed + 'deg)';
 				
 				// elePink.style.transform = 'translate(' + rightSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(' + rotateSpeed + 'deg)';
-				elePurple.style.top = 45 + (diff/150)*(diff/150) + '%';
+				elePurple.style.top = 45 + dropSpeed*dropSpeed + '%';
 				elePurple.style.left = 60 - diff/10 + '%';
 				elePurple.style.transform = 'rotate(-' + rotateSpeed + 'deg)';
-				elePink.style.top = 45 + (diff/150)*(diff/150) + '%';
-				elePink.style.left = 60 + diff/10 + '%';				
+				elePink.style.top = 45 + dropSpeed*dropSpeed + '%';
+				elePink.style.left = 60 + diff/15 + '%';				
 				elePink.style.transform = 'rotate(' + rotateSpeed + 'deg)';
 			}else if (diff>3000){
 				eleGreen.style.opacity = '1';				
