@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑', 'Microsoft Yahei';
+		}
+		html,head,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		.title{
+			width: 200px;
+			position: absolute;
+			top: 215px;
+			left: calc(50% - 100px);
+		}
+		.drops img{
+			width: 30px;
+		}
+		
+		@-webkit-keyframes drop{
+			20% {top: 200px;}
+			20.1% {top: -30px;}
+			100% {top: -30px;}
+		}
+		@keyframes drop{
+			20% {top: 200px;}
+			20.1% {top: -30px;}
+			100% {top: -30px;}
+		}
+		@-webkit-keyframes goleft{		
+			30% {left: -30px;transform: rotate(-90deg);}
+			30.1% {left: 55%; transform: rotate(0);}
+			100% {left: 55%; transform: rotate(0);}
+		}
+		@keyframes goleft{		
+			30% {left: -30px;transform: rotate(-90deg);}
+			30.1% {left: 55%; transform: rotate(0);}
+			100% {left: 55%; transform: rotate(0);}
+		}
+		@-webkit-keyframes goright{	
+			30% {left: 100%;transform: rotate(60deg);}
+			30.1% {left: 65%; transform: rotate(0);}
+			100% {left: 65%; transform: rotate(0);}
+		}
+		@keyframes goright{	
+			30% {left: 100%;transform: rotate(60deg);}
+			30.1% {left: 65%; transform: rotate(0);}
+			100% {left: 65%; transform: rotate(0);}
+		}
+		@-webkit-keyframes goup{			
+			10% {opacity: 1;}	
+			30% {opacity: 1;top: 300px; }
+			30.1% {opacity: 0; top: 300px;}
+			100% {opacity: 0; top: 300px;}
+		}
+		@keyframes goup{			
+			10% {opacity: 1;}	
+			30% {opacity: 1;top: 300px; }
+			30.1% {opacity: 0; top: 300px;}
+			100% {opacity: 0; top: 300px;}
+		}
+		.drops1 .green{
+			position: absolute;
+			top: -30px;
+			left: 60%;			
+			-webkit-animation: drop 3s ease-in infinite;
+			animation: drop 3s ease-in infinite;
+		}		
+		.drops1 .purple{
+			position: absolute;
+			left: 55%;
+			top: 200px;	
+			opacity: 0;	
+			-webkit-animation: goleft 3s ease-out 0.6s infinite,
+					   goup 3s ease-in 0.6s infinite;
+			animation: goleft 3s ease-out 0.6s infinite,
+					   goup 3s ease-in 0.6s infinite;
+		}
+		.drops1 .pink{
+			position: absolute;
+			left: 65%;
+			top: 200px;
+			opacity: 0;	
+			-webkit-animation: goright 3s ease-out 0.6s infinite,
+					   goup 3s ease-in 0.6s infinite;
+			animation: goright 3s ease-out 0.6s infinite,
+					   goup 3s ease-in 0.6s infinite;
+		}
+		/*.drops2 .green{
+			position: absolute;
+			top: -30px;
+			left: 30%;
+			-webkit-animation: drop 3s ease-in .5s infinite;
+			animation: drop 3s ease-in .5s infinite;
+		}		
+		.drops2 .purple{
+			position: absolute;
+			left: 25%;
+			top: 200px;	
+			opacity: 0;	
+			-webkit-animation: goleft 3s ease-out 1.1s infinite,
+					   goup 3s ease-in 1.1s infinite;
+			animation: goleft 3s ease-out 1.1s infinite,
+					   goup 3s ease-in 1.1s infinite;
+		}
+		.drops2 .pink{
+			position: absolute;
+			left: 35%;
+			top: 200px;
+			opacity: 0;	
+			-webkit-animation: goright 3s ease-out 1.1s infinite,
+					   goup 3s ease-in 1.1s infinite;
+			animation: goright 3s ease-out 1.1s infinite,
+					   goup 3s ease-in 1.1s infinite;
+		}
+		.drops3 .green{
+			position: absolute;
+			top: -30px;
+			left: 40%;
+			-webkit-animation: drop 3s ease-in 1s infinite;
+			animation: drop 3s ease-in 1s infinite;
+		}		
+		.drops3 .purple{
+			position: absolute;
+			left: 35%;
+			top: 200px;	
+			opacity: 0;	
+			-webkit-animation: goleft 3s ease-out 1.6s infinite,
+					   goup 3s ease-in 1.6s infinite;
+			animation: goleft 3s ease-out 1.6s infinite,
+					   goup 3s ease-in 1.6s infinite;
+		}
+		.drops3 .pink{
+			position: absolute;
+			left: 45%;
+			top: 200px;
+			opacity: 0;	
+			-webkit-animation: goright 3s ease-out 1.6s infinite,
+					   goup 3s ease-in 1.6s infinite;
+			animation: goright 3s ease-out 1.6s infinite,
+					   goup 3s ease-in 1.6s infinite;
+		}*/
+	</style>
+</head>
+<body>
+	<img src="http://p6.qhimg.com/d/inn/0c4c4851/home-title.png" class="title">
+	<div class="drops1 drops">
+		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" class="green">
+		<img src="http://p5.qhimg.com/d/inn/0c4c4851/home-droppurple.png" class="purple">
+		<img src="http://p2.qhimg.com/d/inn/0c4c4851/imgdrop-yellow.png" class="pink">		
+	</div>
+	<!-- <div class="drops2 drops">
+		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" class="green">
+		<img src="http://p5.qhimg.com/d/inn/0c4c4851/home-droppurple.png" class="purple">
+		<img src="http://p2.qhimg.com/d/inn/0c4c4851/imgdrop-yellow.png" class="pink">		
+	</div>
+	<div class="drops3 drops">
+		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" class="green">
+		<img src="http://p5.qhimg.com/d/inn/0c4c4851/home-droppurple.png" class="purple">
+		<img src="http://p2.qhimg.com/d/inn/0c4c4851/imgdrop-yellow.png" class="pink">		
+	</div> -->
+	
+	<script src="https://s.ssl.qhimg.com/lib/jquery/183.js"></script>
+	<script>
+	
+	</script>
+</body>
+</html>

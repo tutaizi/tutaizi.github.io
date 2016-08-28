@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo3</title>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑', 'Microsoft Yahei';
+		}
+		html,head,body{
+			height: 100%;
+		}
+		.title{
+			width: 200px;
+			position: absolute;
+			top: 40%;
+			left: calc(50% - 100px);
+		}		
+		button{
+			display: inline-block;
+			font-size: 20px;
+			width: 100px;
+			height: 50px;
+			position: relative;
+			top: 0;
+			left: calc(50% - 100px);
+		}
+		.drops{
+			width: 100%;
+			height: 80%;
+			overflow: hidden;
+			position: relative;
+			will-change: transform opacity;
+		}
+		.drops img{
+			width: 30px;
+		}
+		.drops #green{
+			position: absolute;
+			top: -30px;
+			left: 60%;					
+		}
+		.drops #purple{
+			position: absolute;
+			left: 55%;
+			top: 45%;	
+			opacity: 0;			
+		}
+		.drops #pink{
+			position: absolute;
+			left: 65%;
+			top: 45%;
+			opacity: 0;			
+		}
+	</style>
+</head>
+<body>
+	<img src="http://p6.qhimg.com/d/inn/0c4c4851/home-title.png" class="title">
+	<div class="drops">
+		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" id="green">
+		<img src="http://p5.qhimg.com/d/inn/0c4c4851/home-droppurple.png" id="purple">
+		<img src="http://p2.qhimg.com/d/inn/0c4c4851/imgdrop-yellow.png" id="pink">
+		
+	</div>
+	<button id="play">播放</button>
+	<button id="stop">停止</button>
+	<script src="https://s.ssl.qhimg.com/lib/jquery/183.js"></script>
+	<script>
+		var timeStart = Date.now();
+		var eleGreen = document.getElementById('green'),
+			elePurple = document.getElementById('purple'),
+			elePink = document.getElementById('pink');
+		function drop(timeStamp) {			
+			diff = Math.ceil(Date.now() - timeStart);			
+			
+			if (diff < 600) {
+				// eleGreen.style.transform = 'translateY(' + (diff/40)*(diff/40) + 'px)';
+				eleGreen.style.top = (diff/90)*(diff/90) + '%';
+
+				// eleGreen.style.top = (diff/100)*(diff/100)*(diff/100) + 'px';
+				
+			}else if (diff< 1200) {
+				eleGreen.style.opacity = '0';
+				eleGreen.style.top = '-30px';
+				elePurple.style.opacity = '1';
+				elePink.style.opacity = '1';
+				diff = diff - 600;	
+				var dropSpeed = diff/150,
+					leftSpeed = diff/3,
+					rightSpeed = diff/5,
+					rotateSpeed = diff/10;
+				// elePurple.style.transform = 'translate(-' + leftSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(-' + rotateSpeed + 'deg)';
+				
+				// elePink.style.transform = 'translate(' + rightSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(' + rotateSpeed + 'deg)';
+				elePurple.style.top = 45 + (diff/150)*(diff/150) + '%';
+				elePurple.style.left = 60 - diff/10 + '%';
+				elePurple.style.transform = 'rotate(-' + rotateSpeed + 'deg)';
+				elePink.style.top = 45 + (diff/150)*(diff/150) + '%';
+				elePink.style.left = 60 + diff/10 + '%';				
+				elePink.style.transform = 'rotate(' + rotateSpeed + 'deg)';
+			}else if (diff>3000){
+				eleGreen.style.opacity = '1';				
+				// cancelAnimationFrame(drop);
+				// eleGreen.style.transform = 'none';
+				// elePurple.style.transform = 'none';
+				// elePink.style.transform = 'none';
+				timeStart = Date.now();
+			}else{
+				elePurple.style.opacity = '0';
+				elePink.style.opacity = '0';
+			}
+			animDrop = requestAnimationFrame(drop);
+			// cancelAnimationFrame(animDrop);
+		}
+		animDrop = requestAnimationFrame(drop);
+		var playBtn = document.getElementById('play'),
+			stopBtn = document.getElementById('stop');
+		var animDrop = '';
+		playBtn.addEventListener('click', function() {
+			eleGreen.style.opacity = '1';
+			timeStart = Date.now();
+			animDrop = requestAnimationFrame(drop);
+		});
+		stopBtn.addEventListener('click', function() {			
+			cancelAnimationFrame(animDrop);
+		});		
+	</script>
+</body>
+</html>
