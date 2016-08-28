@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>demo3</title>
+	<title>demo1-3</title>
 	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
 	<style>
 		*{
@@ -43,64 +43,31 @@
 			top: -30px;
 			left: 60%;					
 		}
-		.drops #purple{
-			position: absolute;
-			left: 55%;
-			top: 45%;	
-			opacity: 0;			
-		}
-		.drops #pink{
-			position: absolute;
-			left: 65%;
-			top: 45%;
-			opacity: 0;			
-		}
 	</style>
 </head>
 <body>
 	<img src="http://p6.qhimg.com/d/inn/0c4c4851/home-title.png" class="title">
 	<div class="drops">
-		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" id="green">
-		<img src="http://p5.qhimg.com/d/inn/0c4c4851/home-droppurple.png" id="purple">
-		<img src="http://p2.qhimg.com/d/inn/0c4c4851/imgdrop-yellow.png" id="pink">
-		
+		<img src="http://p1.qhimg.com/d/inn/0c4c4851/home-dropgreen.png" id="green">		
 	</div>
 	<button id="play">播放</button>
 	<button id="stop">停止</button>
 	<script src="https://s.ssl.qhimg.com/lib/jquery/183.js"></script>
 	<script>
 		var timeStart = Date.now();
-		var eleGreen = document.getElementById('green'),
-			elePurple = document.getElementById('purple'),
-			elePink = document.getElementById('pink');
+		var eleGreen = document.getElementById('green');
 		function drop(timeStamp) {			
 			diff = Math.ceil(Date.now() - timeStart);			
-			
 			if (diff < 600) {
 				// eleGreen.style.transform = 'translateY(' + (diff/40)*(diff/40) + 'px)';
 				eleGreen.style.top = (diff/90)*(diff/90) + '%';
-
-				// eleGreen.style.top = (diff/100)*(diff/100)*(diff/100) + 'px';
-				
 			}else if (diff< 1200) {
 				eleGreen.style.opacity = '0';
 				eleGreen.style.top = '-30px';
-				elePurple.style.opacity = '1';
-				elePink.style.opacity = '1';
 				diff = diff - 600;	
-				var dropSpeed = diff/170,
-					leftSpeed = diff/3,
-					rightSpeed = diff/5,
-					rotateSpeed = diff/6;
-				// elePurple.style.transform = 'translate(-' + leftSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(-' + rotateSpeed + 'deg)';
+				var dropSpeed = diff/170;				// elePurple.style.transform = 'translate(-' + leftSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(-' + rotateSpeed + 'deg)';
 				
 				// elePink.style.transform = 'translate(' + rightSpeed +'px,' + dropSpeed*dropSpeed*dropSpeed +'px) rotate(' + rotateSpeed + 'deg)';
-				elePurple.style.top = 45 + dropSpeed*dropSpeed + '%';
-				elePurple.style.left = 60 - diff/10 + '%';
-				elePurple.style.transform = 'rotate(-' + rotateSpeed + 'deg)';
-				elePink.style.top = 45 + dropSpeed*dropSpeed + '%';
-				elePink.style.left = 60 + diff/15 + '%';				
-				elePink.style.transform = 'rotate(' + rotateSpeed + 'deg)';
 			}else if (diff>3000){
 				eleGreen.style.opacity = '1';				
 				// cancelAnimationFrame(drop);
@@ -108,9 +75,6 @@
 				// elePurple.style.transform = 'none';
 				// elePink.style.transform = 'none';
 				timeStart = Date.now();
-			}else{
-				elePurple.style.opacity = '0';
-				elePink.style.opacity = '0';
 			}
 			animDrop = requestAnimationFrame(drop);
 			// cancelAnimationFrame(animDrop);
